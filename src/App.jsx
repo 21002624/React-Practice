@@ -8,6 +8,10 @@ import UseState from './Hooks/UseState'
 import UseEffect from './Hooks/UseEffect'
 import UseContext from './Hooks/UseContext'
 import { BrowserRouter as Router,Route,Routes,Link } from 'react-router-dom';
+import LiftingTheStateUp from './StateManagement/LiftingTheStateUp'
+import CodeSpliting from './CodeSpliting/CodeSpliting'
+import { Data } from './Props/PropsType'
+
 
 
 function App() {
@@ -31,6 +35,15 @@ function App() {
         <div>
           <Link to='/use-context'>use-context</Link>
         </div>
+        <div>
+          <Link to='/liftingstateup'>State-up</Link>
+        </div>
+        <div>
+          <Link to='/codespliting'>codes-pliting</Link>
+        </div>
+        <div>
+          <Link to='/propstypes'>props-type</Link>
+        </div>
       </nav>
 
       <Routes>
@@ -39,6 +52,9 @@ function App() {
         <Route path='/use-state' element={<UseState />} />
         <Route path='/use-effect' element={<UseEffect />} />
         <Route path='/use-context' element={<UseContext />} />
+        <Route path='/liftingstateup' element={<LiftingTheStateUp />} />
+        <Route path='/codespliting' element={<CodeSpliting />} />
+        <Route path='/propstypes' element={<Data />} />
       </Routes>
 
     </Router>
